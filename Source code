@@ -1,0 +1,44 @@
+/*
+ * To change this license header, choose License Headers in Project Properties.
+ * To change this template file, choose Tools | Templates
+ * and open the template in the editor.
+ */
+package simpleproject;
+
+import java.awt.FlowLayout;
+import java.awt.GridLayout;
+import javax.swing.*;
+/**
+ *
+ * @author nsivaakumaar
+ */
+public class Simpleproject{
+    JFrame f1;
+    JPanel p1;
+    JTextField t1,t2;
+    JButton b1;
+    Simpleproject(){
+        f1 = new JFrame();
+        p1 = new JPanel();
+        t1 = new JTextField("Username");
+        t2 = new JTextField("Password");
+        b1 = new JButton("Submit");
+        p1.add(t1);
+        p1.add(t2);
+        p1.add(b1);
+        t1.setSize(100,30);
+        t2.setSize(100,30);
+        b1.setSize(100,30);
+        p1.setLayout(new GridLayout(3,1,50,50));
+        p1.setSize(200, 200);
+        f1.add(p1);
+        f1.setLayout(new FlowLayout(FlowLayout.CENTER, 20, 25));    
+        f1.setSize(300, 300);
+        f1.setVisible(true);    
+    }
+    public static void main(String[] args) {
+        // TODO code application logic here
+        new Simpleproject();
+    }
+    
+}
